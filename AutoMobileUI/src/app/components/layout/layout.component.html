@@ -1,0 +1,9 @@
+<div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column main_layout">
+        <div id="content" class="main_content">
+            <app-header [cart]="cart" *ngIf="userLoggedIn || onMenuShow"
+                (logoutUser)="userLoggedIn = $event"></app-header>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Give Your Valuable Feedback</h1>
+
+    <!-- Dropdown container -->
+    <div class="dropdown" (click)="toggleDropdown()">
+        <!-- Dropdown button -->
+        <button class="dropbtn">{{ selectedCategory ? selectedCategory : 'Select Item' }}</button>
+        <!-- Dropdown content (hidden by default) -->
+        <div class="dropdown-content" [class.show]="dropdownOpen">
+            <!-- Checkbox labels inside the dropdown -->
+            <label *ngFor="let product of products">
+                <input type="radio" name="category" [value]="product.id" (change)="selectCategory(product.title)">
+                {{ product.title }}
+            </label>
+        </div>
+    </div>
+
+    <!-- Text input for feedback -->
+    <textarea id="feedbackInput" placeholder="Enter your feedback..." [(ngModel)]="feedback" required></textarea>
+    <div *ngIf="feedbackInvalid" style="color: red;" class="error-message">*Feedback is required.</div>
+    <!-- <star-rating class="stars" [starType]="'svg'" [rating]="rating"></star-rating> -->
+    <button class="submitfb mt-2" (click)="submitFeedback()">Submit</button>
+
+
+</div>
+
+<div class="container">
+    <!-- Display submitted feedbacks -->
+    <div *ngIf="submittedFeedbacks.length > 0" class="submitted-feedbacks">
+        <h2>Submitted Feedbacks:</h2>
+        <ul>
+            <li *ngFor="let feedback of submittedFeedbacks">{{ feedback }}</li>
+            <br>
+            <br>
+        </ul>
+    </div>
+</div>

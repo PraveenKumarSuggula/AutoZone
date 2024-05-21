@@ -1,0 +1,26 @@
+.otp-dialog-container {
+    background: darkgrey;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .otp-dialog-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .otp-dialog-content p {
+    margin-bottom: 15px;
+  }
+  
+  .otp-dialog-actions {
+    text-align: right;
+  }
+  
+  .otp-dialog-content input {
+    margin-bottom: 10px;
+  }
+  

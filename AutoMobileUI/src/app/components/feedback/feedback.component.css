@@ -1,0 +1,106 @@
+/* Container for the entire feedback section */
+.feedback-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* Dropdown styles */
+.dropdown {
+    margin-top: 20px;
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #f44336;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    max-height: 150px;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 8px 12px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Textarea for feedback */
+#feedbackInput {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Error message for feedback validation */
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+/* Submit button */
+.submitfb {
+    background-color: #f44336;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%; /* Make button full width */
+}
+
+/* Submitted feedback section */
+.submitted-feedbacks {
+    margin-top: 20px;
+}
+
+.submitted-feedbacks h2 {
+    color: #333333;
+}
+
+.submitted-feedbacks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.submitted-feedbacks li {
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

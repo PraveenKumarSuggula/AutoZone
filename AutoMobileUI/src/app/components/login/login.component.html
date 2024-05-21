@@ -1,0 +1,55 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+                    <div class="img" style="background-image: url(../../../assets/images/gear.jpg);"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <h2 class="mb-4"><span class="mx-3"><a (click)="dummyLogin(true)">Welcome</a> To Drivo..</span> {{ showSignUpFields ? 'Please Sign Up !!' : 'Please Sign In !!' }}</h2>
+                        <form [formGroup]="loginForm" (ngSubmit)="submitFrom()">
+                            <div class="form-group" *ngIf="showSignUpFields">
+                                <label for="fname">First Name</label>
+                                <input type="text" formControlName="fname" class="form-control">
+                                <div *ngIf="loginForm.get('fname')?.hasError('required') && loginForm.get('fname')?.touched"
+                                    class="text-danger">
+                                    First Name is required
+                                </div>
+                            </div>
+                            <div class="form-group" *ngIf="showSignUpFields">
+                                <label for="lname">Last Name</label>
+                                <input type="text" formControlName="lname" class="form-control">
+                                <div *ngIf="loginForm.get('lname')?.hasError('required') && loginForm.get('lname')?.touched"
+                                    class="text-danger">
+                                    Last Name is required
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" formControlName="email" class="form-control">
+                                <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched"
+                                    class="text-danger">
+                                    Email is required
+                                </div>
+                                <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched"
+                                    class="text-danger">
+                                    Invalid email format
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" formControlName="password" class="form-control">
+                                <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
+                                    class="text-danger">
+                                    Password is required
+                                </div>
+                            </div>
+                            <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">{{ showSignUpFields ? 'Sign Up' : 'Login' }}</button>
+                        </form>
+                        <br>
+                        <p class="text-center" style="cursor: pointer;">{{ showSignUpFields ? 'Already Registered?' : 'Not a member?' }} <a data-toggle="tab" (click)="toggleSignUp()">{{ showSignUpFields ? 'Login' : 'Sign Up' }}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

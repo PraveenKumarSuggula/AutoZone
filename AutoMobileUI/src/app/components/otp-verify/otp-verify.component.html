@@ -1,0 +1,13 @@
+<!-- otp-dialog.component.html -->
+<div class="otp-dialog-container" style="margin-top: 10%;">
+    <h2 class="otp-dialog-title">Enter OTP</h2>
+    <div class="otp-dialog-content">
+      <p>Please enter the OTP sent to your Email:</p>
+      <input type="text" [(ngModel)]="code" placeholder="OTP" maxlength="6" class="form-control">
+    </div>
+    <div class="otp-dialog-actions">
+      <button type="button" class="btn btn-primary mx-2" style="background-color: black; border: 0px;" (click)="verifyOTP()">Verify</button>
+      <button type="button" class="btn btn-primary" style="background-color: black; border: 0px;" routerLink="/login">Cancel</button>
+    </div>
+  </div>
+  
